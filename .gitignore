@@ -1,4 +1,41 @@
-# Исключаем все двоичные файлы
+# Стандартные каталоги и файлы CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
 build/
-# Убрать настройки VSCode
+out/
+bin/
+*.cbp
+
+# Каталоги среды разработки VSCode
 .vscode/
+
+# Файлы отладки, временные файлы и списки
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
+# Каталоги и файлы ОС
+.DS_Store
+Thumbs.db
+
+# Файлы, создаваемые компиляторами
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.pch
+
+# Если используете ctest
+Testing/
+CTestTestfile.cmake
+
+# Если используете Conan или vcpkg
+.conan/
+vcpkg_installed/
