@@ -1,0 +1,46 @@
+{
+	"folders": [
+		{
+			"path": "./"
+		}
+	],
+	"settings": {
+		"cmake.cmakePath": "/usr/bin/cmake",
+		"C_Cpp.default.cppStandard": "c++23",
+		"C_Cpp.default.cStandard": "c99",
+		// "C_Cpp.default.customConfigurationVariables": {
+		// },
+		"C_Cpp.default.includePath": [
+			"${workspaceFolder}/pulse/src/include/",
+			"${workspaceFolder}/tests/src/include",
+			"${workspaceFolder}/**" // Рекурсивно включает все файлы в рабочей папке
+		],
+		"C_Cpp.default.compileCommands": [
+			"${workspaceFolder}/build/compile_commands.json"
+		],
+		"C_Cpp.default.intelliSenseMode": "gcc-x64",
+		"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+		// "cmake.copyCompileCommands": "${workspaceFolder}/.vscode/compile_commands.json"
+		"cmake.configureSettings": {
+			"CMAKE_EXPORT_COMPILE_COMMANDS": true
+		}
+	},
+	"launch": {
+		"version": "0.2.0",
+		"type" : "cppdbg",
+		"configurations": [
+			{
+				"type" : "cppdbg",
+				"cwd" : "${workspaceFolder}/build/pulse/",
+				"name": "Launch C++ Linux",
+				"request": "launch",
+				"MIMode": "gdb",
+				"program" : "${workspaceRoot}/build/pulse/pulse_exec",
+				"args": [
+					"-I ${workspaceFolder}/pulse/src/include",
+					"-I ${workspaceFolder}/tests/src/include"
+				]
+			}
+		]
+	}
+}
