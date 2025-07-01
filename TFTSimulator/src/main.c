@@ -90,16 +90,17 @@ void render_buffer() {
 
 // Получение данных символа
 const uint8_t* get_char_data(char c) {
-    // Простая реализация для ASCII 0-9, a-z, A-Z
-    if (c >= '0' && c <= '9') {
-        return &Font12_Table[(c - '0') * FONT_HEIGHT * BYTES_PER_ROW];
-    } else if (c >= 'A' && c <= 'Z') {
-        return &Font12_Table[(10 + c - 'A') * FONT_HEIGHT * BYTES_PER_ROW];
-    } else if (c >= 'a' && c <= 'z') {
-        return &Font12_Table[(36 + c - 'a') * FONT_HEIGHT * BYTES_PER_ROW];
-    }
-    // Возвращаем пробел для неизвестных символов
-    return &Font12_Table[0];
+    // // Простая реализация для ASCII 0-9, a-z, A-Z
+    // if (c >= '0' && c <= '9') {
+    //     return &Font12_Table[(c - '0') * FONT_HEIGHT * BYTES_PER_ROW];
+    // } else if (c >= 'A' && c <= 'Z') {
+    //     return &Font12_Table[(10 + c - 'A') * FONT_HEIGHT * BYTES_PER_ROW];
+    // } else if (c >= 'a' && c <= 'z') {
+    //     return &Font12_Table[(36 + c - 'a') * FONT_HEIGHT * BYTES_PER_ROW];
+    // }
+    // // Возвращаем пробел для неизвестных символов
+    // return &Font12_Table[0];
+    return 0;
 }
 
 // Вывод символа в позицию (x,y)
